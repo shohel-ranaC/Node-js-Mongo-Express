@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+// access static public folder........
 app.use(express.static('public')); 
 
 // const myMiddleware = (req, res, next) => {
