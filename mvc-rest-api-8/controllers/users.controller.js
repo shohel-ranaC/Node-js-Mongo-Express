@@ -1,10 +1,7 @@
 let users = require('../models/users.model');
 const { v4: uuidv4} = require('uuid');
 
-// get users
-const getAllUser = (req, res) => {
-    res.status(200).json({users});
-};
+ 
 //create users
 const createUser = (req, res) => {
     const newUser ={
@@ -23,7 +20,7 @@ const updateUser = (req, res) => {
     users.filter((user) => user.id === userId).map(
         (selectedUser) =>{
         selectedUser.username = username;
-        selectedUser.email = email;
+        selectedUser.email = email; 
     });
     res.status(200).json(users);
 };
